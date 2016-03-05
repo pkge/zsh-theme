@@ -23,12 +23,11 @@ function virtualenv_prompt_info(){
 # Disable prompt mangling in virtual_env/bin/activate
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
-
-PROMPT='%{$fg[yellow]%}%D{%I:%M}%{$fg[yellow]%}%(!. ➜.)%{$fg[blue]%}%p %{$fg[cyan]%}%c$(git_prompt_info)$(virtualenv_prompt_info)$(git_prompt_ahead_count)$(parse_git_dirty)%{$reset_color%} '
+PROMPT='%{$fg_bold[blue]%}%c$(git_prompt_ahead_count)$(parse_git_dirty)%{$reset_color%} '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[blue]%}(%{$fg[yellow]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$fg[blue]%})%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[yellow]%}✗%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}∂%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 ZSH_THEME_GIT_PROMPT_AHEAD_PREFIX=" %{$fg[blue]%}+"
 ZSH_THEME_GIT_PROMPT_AHEAD_SUFFIX="%{$reset_color%}"
